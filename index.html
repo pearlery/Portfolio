@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natasha Ler Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js"></script>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.navbar');
+            const hamburger = document.getElementById('hamburger-menu');
+
+            // Toggle visibility of the menu
+            navLinks.classList.toggle('show');
+            hamburger.textContent = navLinks.classList.contains('show') ? '⛌' : '☰';
+
+            // Add event listener to close menu on outside click
+            document.addEventListener('click', closeMenuOnClickOutside);
+        }
+
+        function closeMenuOnClickOutside(event) {
+            const navLinks = document.querySelector('.navbar');
+            const hamburger = document.getElementById('hamburger-menu');
+
+            if (!navLinks.contains(event.target) && !hamburger.contains(event.target)) {
+                navLinks.classList.remove('show');
+                hamburger.textContent = '☰';
+                document.removeEventListener('click', closeMenuOnClickOutside);
+            }
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <header>
+        <!-- <h1>NLK</h1> -->
+        <nav>
+            <div class="hamburger" id="hamburger-menu" onclick="toggleMenu()">☰</div>
+            <ul class="navbar nav-links">
+                <li><a href="#about">Home</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about" class="about">
+        <div class="profile">
+            <div>
+                <h2>HI, I'M NATASHA<br>DATA SCIENTIST <br></h2>
+            </div>
+            <img src="src\Profile-nat.png" alt="">
+        </div>
+    </section>
+
+    <!-- <section id="download" class="download">
+        <p>You can Download!</p>
+        <div class="download-btn">
+            <a target="_blank"
+                href="https://raw.githubusercontent.com//Resume/main/Resume.pdf">
+                My Resume</a>
+            <a target="_blank" href="https://raw.githubusercontent.com//Resume/main/Transcript.pdf">
+                My Transcript</a>
+        </div>
+    </section> -->
+    <section id="education" class="education">
+        <h2>Education</h2>
+        
+        <!-- <div class="education-img">
+            <a href="https://sirin.ac.th/">
+                <img src="src\Logo\Sirindhron.jpg" alt="Sirindhorn Surin Logo">
+            </a>
+        </div>
+        <div class="education-container">
+            <div class="education-info">
+                <h3>Sirindhorn School Surin</h3>
+                <p>2019 - 2022</p>
+            </div>
+            <div class="education-info">
+                <h4>English-Math program</h4>
+                <p>Hight School</p>
+            </div>
+        </div> -->
+
+        <div class="education-img">
+            <img src="src\Logo\BU.jpg" alt="Bangkok University Logo">
+        </div>
+        <div class="education-container">
+            <div class="education-info">
+                <h3>Bangkok University <a target="_blank" href="https://www.bu.ac.th/th">Click to Visit◥</a></h3>
+                <p>2022 - Present</p>
+            </div>
+            <div class="education-info">
+                <h4>Engineering - Artificial Intelligence and Data Science.</h4>
+                <p>Bachelor's Degree</p>
+            </div>
+            <div class="education-info">
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section id="experience" class="experience">
+        <h2>Experience</h2>
+        <div class="project-container">
+            <div class="project-block">
+                <div class="project-img">
+                    <div class="slider">
+                        <img src="src\Project\image323.JPG" alt="" class="active">
+                        <img src="src\Project\image211.JPG" alt="">
+                        <img src="src\Project\image222.JPG" alt="">
+                        <img src="src\Project\image75.jpg" alt="">
+    
+                    </div>
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+                <div class="project-card">
+                    <div>
+                        <h3>Guest who by AI ROBOT</h3>
+                        <p>Aug 2024</p>
+                    </div>
+                    <p>ㆍAt Bangkok Universitys Open House 2024. I was responsible for integrating the stem with the
+                        robot, presenting
+                        the Guess Who by AI Robot project, and teaching attendees how to play. This project uses a KUKA
+                        robotic arm to
+                        play a game of guessing cartoon characters, ulling an LLM-based Text Classifier for name
+                        predictions and a real-
+                        time image detection model for precise piece selection.</p>
+                </div>
+            </div>
+
+            <div class="project-block">
+                <div class="project-img">
+                    <div class="slider">
+                        <img src="src/Project/TA1.jpg" alt="" class="active">
+                        <img src="src/Project/TA2.jpg" alt="" class="active">
+                        <img src="src/Project/TA4.jpg" alt="" class="active">
+                        <img src="src/Project/TA5.jpg" alt="" class="active">
+                        <img src="src/Project/TA6.jpg" alt="" class="active">
+
+                    </div>
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+                <div class="project-card">
+                    <div>
+                        <h3>Teaching assistant Tableau for Data Visualization</h3>
+                        <p>Aug 2023</p>
+                    </div>
+                    <p>ㆍBangkok University's Open House 2023, I assisted a professor in teaching a workshop on using
+                        Tableau for Data
+                        Visualization. Addionally, I provided partipants with futher insights into Data Visualization
+                        and Analydics,
+                        enabling them to effectively apply the tool in their data analysis tasks.</p>
+                </div>
+            </div>
+
+            <div class="project-block">
+                <div class="project-img">
+                    <div class="slider">
+                        <img src="src/Project/IMG_6616.JPG" alt="" class="active">
+                        <img src="src/Project/IMG_6617.JPG" alt="">
+                        <img src="src/Project/IMG_6618.JPG" alt="">
+                        <img src="src/Project/IMG_6622.JPG" alt="">
+                        <img src="src/Project/IMG_6624.JPG" alt="">
+                        <img src="src/Project/IMG_6628.JPG" alt="">
+                        <img src="src/Project/IMG_6629.JPG" alt="">
+                        <img src="src/Project/IMG_6632.JPG" alt="">
+                        <img src="src/Project/IMG_6634.JPG" alt="">
+                        <img src="src\Project\image210.JPG" alt="">
+                    </div>
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+                <div class="project-card">
+                    <div>
+                        <h3>Final Amity Hackathon 2023</h3>
+                        <p>March 2023</p>
+                    </div>
+                    <p>ㆍI participated in the Amity Hackathon and reached the final round. My role involved designing the app interface, planning the workflow, delegating tasks, and presenting the project. The app integrated a GPT-3 and DALL-E 2_9 powered chatbot for real-time AI-generated climate change information and images.</p>
+                   
+                </div>
+            </div>
+
+        </div>
+        
+    </section>
+
+
+    <section id="project" class="project">
+        <h2>Project</h2>
+        
+        <div class="project-block">
+            <div class="project-img">
+                <div class="slider">
+                    <img src="src\Bitcoin\1.png" alt="" class="active">
+                    <img src="src\Bitcoin\2.png" alt="">
+                    <img src="src\Bitcoin\3.png" alt="">
+                    <img src="src\Bitcoin\4.png" alt="">
+                    <img src="src\Bitcoin\5.png" alt="">
+                    <img src="src\Bitcoin\6.png" alt="">
+                    <img src="src\Bitcoin\7.png" alt="">
+                    <img src="src\Bitcoin\8.png" alt="">
+                    <img src="src\Bitcoin\9.png" alt="">
+                    <img src="src\Bitcoin\10.png" alt="">
+                    <img src="src\Bitcoin\11.png" alt="">
+                    <img src="src\Bitcoin\12.png" alt="">
+                    <img src="src\Bitcoin\13.png" alt="">
+                    <img src="src\Bitcoin\15.png" alt="">
+
+                </div>
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
+            </div>
+            <div class="project-card">
+                <div>
+                    <h3>Machine Learning Project: Bitcoin Price Prediction</h3>
+                    <p>May 2024</p>
+                </div>
+                <p>ㆍDeveloped machine learning models (Linear Regression, Random Forest, Gradient Boosting) to
+                    predict Bitcoin
+                    closing prices. Preprocessed data, evaluated performance (MSE, R'), and visualzed results using
+                    Python, Pandas,
+                    Scikit-learn, and Matplotlib.</p>
+            </div>
+        </div>
+
+        <div class="project-container">
+            <div class="project-block">
+                <!-- <div class="project-img">
+                    <div class="slider">
+                        <img src="src/Project/IMG_6616.JPG" alt="" class="active">
+                        <img src="src/Project/IMG_6617.JPG" alt="">
+                
+                    </div>
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div> -->
+                <div class="project-card">
+                    <div>
+                        <h3> Web Application Development</h3>
+                        <p>Nov 2023</p>
+                    </div>
+                    <p>ㆍDeveloped a web application for efficient data slorage and retrieval using PHP, SQL, HTML, CSS,
+                        and XAMPP.</p>
+                    <p>ㆍDesigned a relational database with phoMyAdmin for secure and optimized data management.</p>
+                </div>
+            </div>
+            
+        </div>
+
+
+    </section>
+
+
+
+
+    <section id="skills" class="skills">
+        <h2>My Skills</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Programming Languages & Frameworks</h3>
+                <p>Python, SQL, HTML, CSS, JavaScript</p>
+            </div>
+            <div class="card">
+                <h3>Data Analytics, Machine Learning & Data Mining</h3>
+                <p> scikit-learn, TensorFlow, OpenCV, Predictive Modeling,
+                    Data Preparation</p>
+            </div>
+            <div class="card">
+                <h3>Database Management</h3>
+                <p>mySQL, PostgreSQL, ETL Pipelines, Data Integration, Excel</p>
+            </div>
+            <div class="card">
+                <h3>Data Visualization & Business Intelligence</h3>
+                <p>Tableau, Power BI, Looker, Matplotib, Seaborn</p>
+            </div>
+            <div class="card">
+                <h3>Tools & Platforms</h3>
+                <p>Docker, Google Cloud Platform, AWS</p>
+                <h3>Version Control</h3>
+                <p>Git (GitHub)</p>
+            </div>
+
+
+            <div class="card">
+                <h3>Soft Skils</h3>
+                <p>Problem-Solving, Crical Thinking, Storyteling, Team Collaboration, Agile Project Management</p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <footer id="contact">
+        <p>
+            <a href="mailto:Natashaa.ler@gmail.com">Natashaa.ler@gmail.com</a> |
+            <a href="">Tel +66 619762599 </a> |
+            <a href="https://www.linkedin.com/in/natasha-lertsansiri-3b1507299/" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256"
+                    style="position:relative; top:8px">
+                    <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                        stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                        font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                        style="mix-blend-mode: normal">
+                        <g transform="scale(5.12,5.12)">
+                            <path
+                                d="M41,4h-32c-2.76,0 -5,2.24 -5,5v32c0,2.76 2.24,5 5,5h32c2.76,0 5,-2.24 5,-5v-32c0,-2.76 -2.24,-5 -5,-5zM17,20v19h-6v-19zM11,14.47c0,-1.4 1.2,-2.47 3,-2.47c1.8,0 2.93,1.07 3,2.47c0,1.4 -1.12,2.53 -3,2.53c-1.8,0 -3,-1.13 -3,-2.53zM39,39h-6c0,0 0,-9.26 0,-10c0,-2 -1,-4 -3.5,-4.04h-0.08c-2.42,0 -3.42,2.06 -3.42,4.04c0,0.91 0,10 0,10h-6v-19h6v2.56c0,0 1.93,-2.56 5.81,-2.56c3.97,0 7.19,2.73 7.19,8.26z">
+                            </path>
+                        </g>
+                    </g>
+                </svg></a> |
+            <a href="https://github.com/pearlery" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="33" height="33" viewBox="0,0,256,256"
+                    style="position:relative; top:9px">
+                    <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                        stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                        font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                        style="mix-blend-mode: normal">
+                        <g transform="scale(4,4)">
+                            <path
+                                d="M32,6c-14.359,0 -26,11.641 -26,26c0,12.277 8.512,22.56 19.955,25.286c-0.592,-0.141 -1.179,-0.299 -1.755,-0.479v-5.957c0,0 -0.975,0.325 -2.275,0.325c-3.637,0 -5.148,-3.245 -5.525,-4.875c-0.229,-0.993 -0.827,-1.934 -1.469,-2.509c-0.767,-0.684 -1.126,-0.686 -1.131,-0.92c-0.01,-0.491 0.658,-0.471 0.975,-0.471c1.625,0 2.857,1.729 3.429,2.623c1.417,2.207 2.938,2.577 3.721,2.577c0.975,0 1.817,-0.146 2.397,-0.426c0.268,-1.888 1.108,-3.57 2.478,-4.774c-6.097,-1.219 -10.4,-4.716 -10.4,-10.4c0,-2.928 1.175,-5.619 3.133,-7.792c-0.2,-0.567 -0.533,-1.714 -0.533,-3.583c0,-1.235 0.086,-2.751 0.65,-4.225c0,0 3.708,0.026 7.205,3.338c1.614,-0.47 3.341,-0.738 5.145,-0.738c1.804,0 3.531,0.268 5.145,0.738c3.497,-3.312 7.205,-3.338 7.205,-3.338c0.567,1.474 0.65,2.99 0.65,4.225c0,2.015 -0.268,3.19 -0.432,3.697c1.898,2.153 3.032,4.802 3.032,7.678c0,5.684 -4.303,9.181 -10.4,10.4c1.628,1.43 2.6,3.513 2.6,5.85v8.557c-0.576,0.181 -1.162,0.338 -1.755,0.479c11.443,-2.726 19.955,-13.009 19.955,-25.286c0,-14.359 -11.641,-26 -26,-26zM33.813,57.93c-0.599,0.042 -1.203,0.07 -1.813,0.07c0.61,0 1.213,-0.029 1.813,-0.07zM37.786,57.346c-1.164,0.265 -2.357,0.451 -3.575,0.554c1.218,-0.103 2.411,-0.29 3.575,-0.554zM32,58c-0.61,0 -1.214,-0.028 -1.813,-0.07c0.6,0.041 1.203,0.07 1.813,0.07zM29.788,57.9c-1.217,-0.103 -2.411,-0.289 -3.574,-0.554c1.164,0.264 2.357,0.451 3.574,0.554z">
+                            </path>
+                        </g>
+                    </g>
+                </svg>
+            </a> |
+            <a href="https://maps.app.goo.gl/4ZstDrSG8w9hAx7WA" target="_blank"
+                alt="91/552 ตำบลคลองหนึ่ง อำเภอคลองหลวง ปทุมธานี 12120">
+                <img width="32" height="32"
+                    style="position:relative; top:8px;filter: invert(100%) sepia(0%) saturate(7471%) hue-rotate(72deg) brightness(100%) contrast(100%);"
+                    src="https://img.icons8.com/pulsar-line/48/address.png" alt="address" />
+            </a>
+        <p style="margin-top: 5px;">91/552 ต.คลองหนึ่ง อ.คลองหลวง ปทุมธานี 12120</p>
+        </p>
+        <p style="margin-top: 20px;">&copy; 2024 Natasha Lertsansiri</p>
+
+    </footer>
+</body>
+
+</html>
