@@ -3,6 +3,14 @@
     padding: 0;
     box-sizing: border-box;
   }
+
+:root{
+    --Green:#008000;
+    --Pink:#FFC0CB;
+    --Soft-pink:#e09ece;
+    --Blue:#87CEEB;
+
+}
 html {
     scroll-behavior: smooth;
 }
@@ -27,7 +35,7 @@ header {
 
 header h1 {
     font-size: 24px;
-    color: #0fbd63;
+    color: var();
 }
 
 .navbar {
@@ -73,12 +81,12 @@ header nav ul li {
 
 header nav ul li a {
     text-decoration: none;
-    color: #fff;
+    color: var(--Blue);
     transition: color 0.3s;
 }
 
 header nav ul li a:hover {
-    color: #0fbd63;
+    color: var(--Pink);
 }
 
 
